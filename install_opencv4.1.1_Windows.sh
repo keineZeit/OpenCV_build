@@ -1,7 +1,7 @@
-set "openCvSource=opencv-4.1.1"
-set "openCVExtraModules=opencv_contrib-4.1.1/modules"
-set "openCvBuild=%openCvSource%\build"
-set "compiler="Visual Studio 15 2017 Win64""
+set "opencvSource=opencv-4.1.1"
+set "opencvExtraModules=opencv_contrib-4.1.1/modules"
+set "opencvBuild=%opencvSource%\build"
+set "compiler=Visual Studio 16 2019"
 set "buildType=Release"
 
 set "python2_executable=C:/Python27/python.exe"
@@ -17,9 +17,10 @@ set "python3_numpy_include_dirs=C:/Users/root/Anaconda3/lib/site-packages/numpy/
 set "python3_packages_path=C:/Users/root/Anaconda3/Lib/site-packages"
 
 cmake ^
--B"%openCvBuild%/" ^
--H"%openCvSource%/" ^
--G"Visual Studio 15 2017 Win64" ^
+-B"%opencvBuild%/" ^
+-H"%opencvSource%/" ^
+-G"%compiler%" ^
+-Ax64 ^
 -DCMAKE_BUILD_TYPE=%buildType% ^
 -DBUILD_opencv_world=ON ^
 -DBUILD_opencv_gapi=OFF ^
@@ -27,7 +28,7 @@ cmake ^
 -DINSTALL_TESTS=OFF ^
 -DINSTALL_C_EXAMPLES=OFF ^
 -DBUILD_EXAMPLES=OFF ^
--DOPENCV_EXTRA_MODULES_PATH="%openCVExtraModules%/" ^
+-DOPENCV_EXTRA_MODULES_PATH="%opencvExtraModules%/" ^
 -DWITH_CUDA=ON ^
 -DCUDA_FAST_MATH=ON ^
 -DWITH_CUBLAS=ON ^
