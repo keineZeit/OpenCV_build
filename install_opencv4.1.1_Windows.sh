@@ -1,5 +1,5 @@
-set "openCvSource=opencv-4.1.0"
-set "openCVExtraModules=opencv_contrib-4.1.0/modules"
+set "openCvSource=opencv-4.1.1"
+set "openCVExtraModules=opencv_contrib-4.1.1/modules"
 set "openCvBuild=%openCvSource%\build"
 set "compiler="Visual Studio 15 2017 Win64""
 set "buildType=Release"
