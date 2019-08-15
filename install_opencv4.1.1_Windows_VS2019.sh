@@ -23,8 +23,6 @@ cmake ^
 -Ax64 ^
 -DCMAKE_BUILD_TYPE=%buildType% ^
 -DBUILD_opencv_world=ON ^
--DBUILD_opencv_gapi=OFF ^
--DWITH_NVCUVID=OFF ^
 -DINSTALL_TESTS=OFF ^
 -DINSTALL_C_EXAMPLES=OFF ^
 -DBUILD_EXAMPLES=OFF ^
@@ -51,6 +49,6 @@ cmake ^
 -DPYTHON3_PACKAGES_PATH="%python3_packages_path%" ^
 -DBUILD_PROTOBUF=ON
 
-cmake --build %openCvBuild% --target ALL_BUILD --config Release
+cmake --build %opencvBuild% --target ALL_BUILD --config Release
 
-cmake --build %openCvBuild% --target INSTALL --config Release
+cmake --build %opencvBuild% --target INSTALL --config Release
