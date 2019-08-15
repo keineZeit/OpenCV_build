@@ -49,3 +49,7 @@ cmake ^
 -DPYTHON3_NUMPY_INCLUDE_DIRS="%python3_numpy_include_dirs%" ^
 -DPYTHON3_PACKAGES_PATH="%python3_packages_path%" ^
 -DBUILD_PROTOBUF=ON
+
+cmake --build %openCvBuild% --target ALL_BUILD --config Release
+
+cmake --build %openCvBuild% --target INSTALL --config Release
